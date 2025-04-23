@@ -520,6 +520,7 @@ public class Alumnos extends javax.swing.JFrame {
       txtEmail.setText("");
       btnGr.clearSelection();
     }
+    @SuppressWarnings("empty-statement")
     private void cargarTabla(){
         DefaultTableModel modeloTabla = (DefaultTableModel) tblAlumnos.getModel();
         modeloTabla.setRowCount(0);
@@ -528,6 +529,8 @@ public class Alumnos extends javax.swing.JFrame {
         ResultSetMetaData rsmd;
         int columnas;
         
+        int[] anchos = {10,50,100,30,100};
+        for(int i= 0; tblAlumnos.getColumnCount(); i++);
         try {
         Connection con = Conexion.getConexion();
         ps = con.prepareStatement( "SELECT carne, nombre, sexo, carrera, email FROM alumnos " );
