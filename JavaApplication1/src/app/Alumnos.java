@@ -451,6 +451,7 @@ public class Alumnos extends javax.swing.JFrame {
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Registro guardado correctamente.");
         }
+        cargarTabla();
     } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "Por favor, ingresa números válidos en los campos Carnet y Teléfono.", "Error", JOptionPane.ERROR_MESSAGE);
     } catch (SQLException e) {
@@ -524,6 +525,7 @@ public class Alumnos extends javax.swing.JFrame {
         } else {
             JOptionPane.showMessageDialog(null, "Eliminación cancelada.");
         }
+        cargarTabla();
     } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(null, "Por favor, ingresa un número válido como carnet.", "Error", JOptionPane.ERROR_MESSAGE);
     } catch (SQLException e) {
